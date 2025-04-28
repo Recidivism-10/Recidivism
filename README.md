@@ -53,6 +53,63 @@ drive.mount('/content/drive', force_remount=True)
     ├── chroma_db/
     └── saved_model/
    ```
+3. Install required libraries (use the provided pip install cells).
+4. Upload PDFs into Google Drive manually or via Streamlit App.
+5. Run all cells sequentially in the notebook:
+
+- Extract text from PDFs
+
+- Clean and chunk text
+
+- Generate embeddings
+
+- Store documents in ChromaDB
+
+- Save or load machine learning models
+
+- Launch Streamlit app
+
+6. Access the Application:
+ After launching, you will get a URL like:
+```csharp
+✅ Streamlit app is live at: https://<your-ngrok-id>.ngrok-free.app
+```
+Open the link to interact with your application.
+
+## Functionalities
+Chatbot Tab
+- Query uploaded documents using a semantic search.
+
+- Retrieve summarized answers powered by a T5 model.
+
+PDF Upload Tab
+- Upload new PDFs directly into the system.
+
+- Automatic extraction, embedding, and storage.
+
+Manage Files Tab
+- Delete specific documents by filename.
+
+- Manage database contents.
+
+## References
+[Federal Bureau of Prisons - EBRR Programs](https://www.bop.gov/inmates/fsa/docs/evidence_based_recidivism_reduction_programs.pdf)
+
+[Crime Solutions - Recidivism Programs Database](https://crimesolutions.ojp.gov/topics/Recidivism)
+
+[The First Step Act Overview (CRS Report)](https://www.congress.gov/crs-product/R45558)
+
+## Acknowledgments
+- FedWriters — Project Sponsor
+
+- George Mason University DAEN Program
+
+## Notes
+- Deployment using Ngrok free plan may reset tunnels every 2 hours.
+
+- All embeddings and models are stored persistently on Google Drive.
+
+
 
 
 

@@ -33,3 +33,15 @@ Ensure the following libraries are installed before running the notebook:
 ```bash
 pip install pdfplumber PyMuPDF pytesseract pdf2image pillow docling camelot chromadb
 pip install streamlit==1.44.1 PyPDF2==3.0.1 joblib==1.4.2 numpy==2.0.2 pandas==2.2.2 torch==2.6.0 datasets==3.5.0 pyngrok==7.2.3 fsspec==2024.12.0 gcsfs==2024.12.0 import-ipynb
+```
+## Project Structure
+📓 Final_Recidivism_10.ipynb   # Main Jupyter Notebook (complete code)
+📁 /Colab_Chatbot/             # Google Drive folder
+    ├── chroma_db/             # Persistent ChromaDB vector database
+    └── saved_model/           # Pre-trained BERT and SentenceTransformer models
+    
+## How to Run 
+1. Mount Google Drive in Colab:
+   from google.colab import drive
+drive.mount('/content/drive', force_remount=True)
+

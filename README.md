@@ -43,8 +43,10 @@ pip install streamlit==1.44.1 PyPDF2==3.0.1 joblib==1.4.2 numpy==2.0.2 pandas==2
 ## How to Run 
 <ol>
   <li>Mount Google Drive in Colab:</li>
+  ```python
    from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
+  ```
 </ol>
 
 

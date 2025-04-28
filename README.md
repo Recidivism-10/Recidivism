@@ -27,7 +27,7 @@ This platform supports **FedWriters** and the **Federal Bureau of Prisons (BOP)*
 ## Installation
 
 ### Prerequisites
-
+- Ngrok account and authtoken for public app sharing
 Ensure the following libraries are installed before running the notebook:
 
 ```bash

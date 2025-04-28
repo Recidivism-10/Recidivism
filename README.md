@@ -41,12 +41,12 @@ pip install streamlit==1.44.1 PyPDF2==3.0.1 joblib==1.4.2 numpy==2.0.2 pandas==2
     └── saved_model/           # Pre-trained BERT and SentenceTransformer models
     
 ## How to Run 
-<ol>
-  <li>Mount Google Drive in Colab:</li>
+
+ 1. Mount Google Drive in Colab:
   ```python
    from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
   ```
-</ol>
+
 
 

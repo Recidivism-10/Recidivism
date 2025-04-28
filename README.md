@@ -47,6 +47,11 @@ pip install streamlit==1.44.1 PyPDF2==3.0.1 joblib==1.4.2 numpy==2.0.2 pandas==2
    from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
   ```
+2. Directory Setup (auto-created by code if missing):
+   /content/drive/MyDrive/Colab_Chatbot/
+    ├── chroma_db/
+    └── saved_model/
+
 
 
 

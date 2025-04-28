@@ -48,9 +48,11 @@ pip install streamlit==1.44.1 PyPDF2==3.0.1 joblib==1.4.2 numpy==2.0.2 pandas==2
 drive.mount('/content/drive', force_remount=True)
   ```
 2. Directory Setup (auto-created by code if missing):
+   ```swift
    /content/drive/MyDrive/Colab_Chatbot/
     ├── chroma_db/
     └── saved_model/
+   ```
 
 
 

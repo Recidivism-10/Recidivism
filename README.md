@@ -1,43 +1,35 @@
-# Recidivism Program Ingestion and Evaluation
+# Recidivism Program Ingestion and Evaluation Platform
 
 ## Project Overview
-This project supports the Recidivism Reduction component of the First Step Act (FSA) by developing machine learning and data analytics tools to evaluate Evidence-Based Recidivism Reduction (EBRR) programs.
 
-Partner Organization: **FedWriters**  
-Point of Contacts: Mitchell Cho, Marc Fain, Kevin Newcomb
+The Recidivism Validation Platform is a **single Jupyter Notebook-based application** that extracts, analyzes, embeds, and visualizes Evidence-Based Recidivism Reduction (EBRR) program data from PDFs.  
+It integrates **OCR extraction**, **text embedding**, **vector database (ChromaDB)** management, and a **Streamlit web app** — all within one `.ipynb` file.
 
----
-
-## Problem Statement
-The Federal Bureau of Prisons (BOP) faces challenges implementing recidivism reduction programs due to staff shortages, budget constraints, technology limitations, and inefficient program validation processes.  
-This project builds a **centralized EBRR Assessment System** to streamline program validation using AI/ML and data analytics.
+This platform supports **FedWriters** and the **Federal Bureau of Prisons (BOP)** in evaluating correctional programs under the First Step Act.
 
 ---
 
-## Project Goals
-- Build a **data mining system** for automatic data extraction and validation
-- Use **machine learning models** to predict program effectiveness
-- Design **interactive dashboards** for program evaluation
-- Deploy a **secure, web-based validation platform**
+## Features
+
+- 📄 **Automated PDF Text Extraction**: Using pdfplumber, PyMuPDF, and OCR (pytesseract)
+- 🧹 **Text Cleaning and Chunking**: Standardizing and splitting text into analyzable chunks
+- 🧠 **Embeddings and Storage**: Generating semantic embeddings with Sentence-Transformers and storing them in ChromaDB
+- 🌐 **Interactive Streamlit App**: 
+  - Upload and process new PDFs
+  - Ask questions about processed documents
+  - Visualize document similarity
+  - Manage and delete documents
+- ☁️ **Persistent Storage**: All embeddings and models are stored on Google Drive
+- 🚀 **Public Access**: App is deployed publicly via Ngrok tunnel
 
 ---
 
-## Data Sources
-- Department of Justice Crime Solutions Database: [Link](https://crimesolutions.ojp.gov/topics/Recidivism)
-- Publicly available recidivism datasets
+## Installation
 
----
+### Prerequisites
 
-## Technical Stack
-- **Python** (pandas, scikit-learn, matplotlib, etc.)
-- **Jupyter Notebook** for model building
-- **AWS/Azure** cloud resources (future deployment)
-- **Streamlit** or **Flask** (for the web-based prototype)
+Ensure the following libraries are installed before running the notebook:
 
----
-
-## How to Run the Project
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/recidivism-evaluation.git
-   cd recidivism-evaluation
+```bash
+pip install pdfplumber PyMuPDF pytesseract pdf2image pillow docling camelot chromadb
+pip install streamlit==1.44.1 PyPDF2==3.0.1 joblib==1.4.2 numpy==2.0.2 pandas==2.2.2 torch==2.6.0 datasets==3.5.0 pyngrok==7.2.3 fsspec==2024.12.0 gcsfs==2024.12.0 import-ipynb
